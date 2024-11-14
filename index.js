@@ -66,8 +66,8 @@ function renderApplication(state) {
 
           //update card images:
           if (data.layout == 'transform' || data.layout == 'modal_dfc') {
-            card.cardImage = (data.card_faces[0].image_uris) ? data.card_faces[0].image_uris.border_crop : "";
-            card.cardImage2 = (data.card_faces[1].image_uris) ? data.card_faces[1].image_uris.border_crop : "";
+            card.cardImage = (data.card_faces[0].image_uris) ? data.card_faces[0].image_uris.png : "";
+            card.cardImage2 = (data.card_faces[1].image_uris) ? data.card_faces[1].image_uris.png : "";
           } else {
             if(card.layout === 'checklist') {
               card.layout = 'normal';
@@ -78,7 +78,7 @@ function renderApplication(state) {
               </button>
             </div>`);
             }
-            card.cardImage = (data.image_uris) ? data.image_uris.border_crop : "";
+            card.cardImage = (data.image_uris) ? data.image_uris.png : "";
           }
 
           completedRequests++;
@@ -256,8 +256,8 @@ function buildSpoiler(deckList) {
               
               card.alternateImages = resultData.data.map(function(item) {
                 let alternateImage = {};
-                alternateImage.cardImage = item.card_faces[0].image_uris.border_crop;
-                alternateImage.cardImage2 = item.card_faces[1].image_uris.border_crop;
+                alternateImage.cardImage = item.card_faces[0].image_uris.png;
+                alternateImage.cardImage2 = item.card_faces[1].image_uris.png;
                 alternateImage.set =  item.set_name;
                 return alternateImage;
               });
@@ -269,7 +269,7 @@ function buildSpoiler(deckList) {
               
               card.alternateImages = resultData.data.map(function(item) {
                 let alternateImage = {};
-                alternateImage.cardImage = item.image_uris.border_crop;
+                alternateImage.cardImage = item.image_uris.png;
                 alternateImage.set =  item.set_name;
                 return alternateImage;
               });

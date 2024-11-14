@@ -3,6 +3,7 @@
   html, body {
     height: auto;
     margin: 0;
+    -webkit-print-color-adjust: exact !important;
   }
   
   .d-print-none {
@@ -10,20 +11,23 @@
   }
   
   @page {
-    size: auto;
-    margin-top: 0.25in;
-    margin-left: 0.25in;
+    size: landscape;
+    margin-top: 10.2mm;
+    margin-left: 12.5mm;
     margin-bottom: 0;
     margin-right: 0;
   }
   
   .card-div {
-    width: 235px;
-    height: 329px;
+    width: 65mm;
+    height: 93mm;
     page-break-inside: avoid;
-    display:inline-block;
-    border-right: 1px solid grey;
-    border-bottom: 1px solid grey;
+    display: inline-block;
+    background: #000;
+  }
+  
+  img.normal {
+    border-radius: 3.5mm;
   }
   
   .js-results.row {
