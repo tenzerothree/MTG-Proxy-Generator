@@ -11,16 +11,19 @@
   }
   
   @page {
-    size: landscape;
-    margin-top: 10.2mm;
-    margin-left: 12.5mm;
+    /*size: landscape;
+    margin-top: 17.5mm;
+    margin-left: 25mm;*/
+    size: portrait;
+    margin-top: 15mm;
+    margin-left: 10.2mm;
     margin-bottom: 0;
     margin-right: 0;
   }
   
   .card-div {
-    width: 65mm;
-    height: 93mm;
+    width: 63mm;
+    height: 88mm;
     page-break-inside: avoid;
     display: inline-block;
     background: #000;
